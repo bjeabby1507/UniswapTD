@@ -49,6 +49,9 @@ async function deployEvaluator(deployer, network, accounts) {
 	submitErc20 = await Evaluator.hasBeenPaired("0x8baE1b7734CF0DE201435881296c6174cb024c41");
 	console.log("submitErc20 "+submitErc20);
 	//await Evaluator.ex6b_testErc20TickerAndSupply();
+	//await Evaluator.ex7_tokenIsTradableOnUniswap();
+	//var exo7=await Evaluator.exerciceProgression(accounts[0],7);
+	//console.log("exo7 "+exo7);
 
 	
 }

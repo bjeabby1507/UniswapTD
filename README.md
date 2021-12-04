@@ -83,16 +83,24 @@ Extra points if you find bugs / corrections this TD can benefit from, and submit
 npm install truffle`, `npm install @openzeppelin/contracts@3.4.1` , `npm install @truffle/hdwallet-provider`, `npm i @supercharge/strings`
 ## TD
 - address : 0x6f7280BF25d0D4A3f47b874bEdDdc4Ff4Cb44Cd6 
+- TDToken 0xC366a0CDcdcD2E0C3141acDC8302f0fCa53848a3
+- Evaluator 0x34342dE8bDFd22228350e65376109123CF1Bd7E8
+- dummyToken 0xeD1Ea3d9056FF83B364f9303701B61C556597ee9
 ```
 truffle migrate -- network ganache --skip-dry-run (to test)
 truffle migrate  --network rinkeby --skip-dry-run
 ```
 #### Uniswap basics
-- Interact with Evaluator contract and call dummyToken()  with [Mycrypto] to get the address contract then buy some units of dummyToken on Uniswap
+- Interact with Evaluator contract and call dummyToken()  with [Mycrypto](https://app.mycrypto.com) to get the address contract then buy some units of dummyToken on [Uniswap](https://app.uniswap.org/#/swap)
+- Provide liquidity to the Weth - dummyToken pool on [Uniswap](https://app.uniswap.org/#/add/v2/ETH/0xeD1Ea3d9056FF83B364f9303701B61C556597ee9)
 #### ERC20 basics
-Ticker = 0KoZ5
-Supply = 944096955000000000000000000
-ERC20Token 0x8baE1b7734CF0DE201435881296c6174cb024c41
+- Ticker = 0KoZ5
+- Supply = 944096955000000000000000000
+- ERC20Token 0x8baE1b7734CF0DE201435881296c6174cb024c41
+
+#### Uniswap basics
+
+- Create a uniswap pool for you token and add [liquidity](https://app.uniswap.org/#/add/v2/ETH/0x8baE1b7734CF0DE201435881296c6174cb024c41) to it :Weth - myToken
 
 
 
