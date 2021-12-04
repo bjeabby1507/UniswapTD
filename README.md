@@ -80,5 +80,21 @@ Extra points if you find bugs / corrections this TD can benefit from, and submit
 - Evaluator `0x34342dE8bDFd22228350e65376109123CF1Bd7E8`
 
 ## Installing
+npm install truffle`, `npm install @openzeppelin/contracts@3.4.1` , `npm install @truffle/hdwallet-provider`, `npm i @supercharge/strings`
+## TD
+- address : 0x6f7280BF25d0D4A3f47b874bEdDdc4Ff4Cb44Cd6 
+```
+truffle migrate -- network ganache --skip-dry-run (to test)
+truffle migrate  --network rinkeby --skip-dry-run
+```
+#### Uniswap basics
+- Interact with Evaluator contract and call dummyToken()  with [Mycrypto] to get the address contract then buy some units of dummyToken on Uniswap
+#### ERC20 basics
+Ticker = 0KoZ5
+Supply = 944096955000000000000000000
+ERC20Token 0x8baE1b7734CF0DE201435881296c6174cb024c41
+
+
+
 
 

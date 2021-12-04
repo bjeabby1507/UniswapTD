@@ -16,39 +16,39 @@ module.exports = (deployer, network, accounts) => {
 };
 
 async function deployTDToken(deployer, network, accounts) {
-	TDToken = await TDErc20.new("TD-AMM-101","TD-AMM-101",web3.utils.toBN("20000000000000000000000000000"))
-	dummyToken = await ERC20.new("dummyToken", "DTK", web3.utils.toBN("2000000000000000000000000000000"))
-	uniswapV2FactoryAddress = "0x5c69bee701ef814a2b6a3edd4b1652cb9cc5aa6f"
-	wethAddress = "0xc778417e063141139fce010982780140aa0cd5ab"
+	TDToken = await TDErc20.new("TD-AMM-101","TD-AMM-101",web3.utils.toBN("20000000000000000000000000000"));
+	dummyToken = await ERC20.new("dummyToken", "DTK", web3.utils.toBN("2000000000000000000000000000000"));
+	uniswapV2FactoryAddress = "0x5c69bee701ef814a2b6a3edd4b1652cb9cc5aa6f";
+	wethAddress = "0xc778417e063141139fce010982780140aa0cd5ab";
 }
 
 async function deployEvaluator(deployer, network, accounts) {
-	Evaluator = await evaluator.new(TDToken.address, dummyToken.address, uniswapV2FactoryAddress, wethAddress)
+	Evaluator = await evaluator.new(TDToken.address, dummyToken.address, uniswapV2FactoryAddress, wethAddress);
 }
 
 async function setPermissionsAndRandomValues(deployer, network, accounts) {
-	await TDToken.setTeacher(Evaluator.address, true)
-	randomSupplies = []
-	randomTickers = []
+	await TDToken.setTeacher(Evaluator.address, true);
+	randomSupplies = [];
+	randomTickers = [];
 	for (i = 0; i < 20; i++)
 		{
-		randomSupplies.push(Math.floor(Math.random()*1000000000))
-		randomTickers.push(Str.random(5))
+		randomSupplies.push(Math.floor(Math.random()*1000000000));
+		randomTickers.push(Str.random(5));
 		// randomTickers.push(web3.utils.utf8ToBytes(Str.random(5)))
 		// randomTickers.push(Str.random(5))
 		}
 
-	console.log(randomTickers)
-	console.log(randomSupplies)
+	console.log(randomTickers);
+	console.log(randomSupplies);
 	// console.log(web3.utils)
 	// console.log(type(Str.random(5)0)
 	await Evaluator.setRandomTickersAndSupply(randomSupplies, randomTickers);
 }
 
 async function deployRecap(deployer, network, accounts) {
-	console.log("TDToken " + TDToken.address)
-	console.log("dummyToken " + dummyToken.address)
-	console.log("Evaluator " + Evaluator.address)
+	console.log("TDToken " + TDToken.address);
+	console.log("dummyToken " + dummyToken.address);
+	console.log("Evaluator " + Evaluator.address);
 }
 
 
