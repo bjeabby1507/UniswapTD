@@ -82,10 +82,20 @@ Extra points if you find bugs / corrections this TD can benefit from, and submit
 ## Installing
 npm install truffle`, `npm install @openzeppelin/contracts@3.4.1` , `npm install @truffle/hdwallet-provider`, `npm i @supercharge/strings`
 ## TD
+v1 :
+
 - address : 0x6f7280BF25d0D4A3f47b874bEdDdc4Ff4Cb44Cd6 
 - TDToken 0xC366a0CDcdcD2E0C3141acDC8302f0fCa53848a3
 - Evaluator 0x34342dE8bDFd22228350e65376109123CF1Bd7E8
 - dummyToken 0xeD1Ea3d9056FF83B364f9303701B61C556597ee9
+
+v2 :
+
+- address : 0x6f7280BF25d0D4A3f47b874bEdDdc4Ff4Cb44Cd6 
+- TDToken 0x89Aa93ac2f2B59a1c00294815fbE6b1e8438319e
+- Evaluator 0x90315516b2F5534ac68f109bA9412530EbECfac1
+- dummyToken 0xFed1E3aa9fB4Cf7ccD5Ce0291deCa90a3D23bFA6
+
 ```
 truffle migrate -- network ganache --skip-dry-run (to test)
 truffle migrate  --network rinkeby --skip-dry-run
@@ -94,15 +104,25 @@ truffle migrate  --network rinkeby --skip-dry-run
 - Interact with Evaluator contract and call dummyToken()  with [Mycrypto](https://app.mycrypto.com) to get the address contract then buy some units of dummyToken on [Uniswap](https://app.uniswap.org/#/swap)
 - Provide liquidity to the Weth - dummyToken pool on [Uniswap](https://app.uniswap.org/#/add/v2/ETH/0xeD1Ea3d9056FF83B364f9303701B61C556597ee9)
 #### ERC20 basics
+
+v1 :
+
 - Ticker = 0KoZ5
 - Supply = 944096955000000000000000000
 - ERC20Token 0x8baE1b7734CF0DE201435881296c6174cb024c41
+
+v2 :
+
+- Ticker = DRp2X
+- Supply = 573718728000000000000000000
+- ERC20Token 0x00eB1745C4Aa60e0DBDB9D9cDED83548430eeD58
 
 #### Uniswap basics
 
 - Create a uniswap pool for you token and add [liquidity](https://app.uniswap.org/#/add/v2/ETH/0x8baE1b7734CF0DE201435881296c6174cb024c41) to it :Weth - myToken
 
-
+#### Uniswap integration
+Ex 8 , 9, 10, 11 : Still not working
 
 
 
